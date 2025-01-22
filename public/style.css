@@ -1,0 +1,155 @@
+/* Navbar */
+.navbar-brand {
+    color: #96999b; /* Ubah warna teks sesuai kebutuhan */
+    font-weight: bold;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* Scroll Text */
+.scroll-text-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffeb3b; /* Warna kuning */
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    animation: scroll-left 10s linear infinite;
+    padding: 7px 0;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Mulai dari luar layar kanan */
+    }
+    100% {
+        transform: translateX(-100%); /* Bergerak hingga luar layar kiri */
+    }
+}
+
+/* Filter Kategori dan Harga */
+.filters {
+    margin-top: 20px; /* Memberikan jarak dari carousel */
+    width: 15%; /* Lebar penuh untuk menyesuaikan kontainer */
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex; /* Flexbox untuk tata letak */
+    flex-direction: column;
+    align-items: flex-start; /* Menyusun konten ke kiri */
+    gap: 20px; /* Memberikan jarak antar elemen */
+}
+
+.filters h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #495057;
+    text-align: left; /* Judul filter rata kiri */
+    width: 100%; /* Menyesuaikan lebar kontainer */
+}
+
+/* Filter Kategori */
+.category-filters {
+    display: flex; /* Flexbox untuk daftar kategori */
+    flex-direction: column; /* Daftar kategori dalam kolom */
+    gap: 10px; /* Jarak antar kategori */
+    width: 100%; /* Lebar penuh */
+}
+
+.category-filters div {
+    display: flex; /* Flexbox untuk checkbox dan label */
+    align-items: center; /* Menyelaraskan secara vertikal */
+    gap: 10px; /* Jarak antara checkbox dan label */
+}
+
+.category-filters label {
+    font-size: 0.9em;
+    color: #495057;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #e2e6ea;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex-grow: 1; /* Membuat label menempati ruang kosong */
+    text-align: center; /* Label di tengah */
+}
+
+.category-filters input[type="checkbox"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Slider Harga */
+.price-range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px; /* Jarak antar elemen */
+}
+
+.price-range-container h4 {
+    margin-bottom: 10px;
+}
+
+.form-range {
+    width: 100%; /* Lebar penuh */
+}
+
+.price-range-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.price-range-box span {
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+    .filters {
+        margin-top: 10px;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .category-filters div {
+        gap: 5px;
+    }
+
+    .filters h4 {
+        font-size: 1em;
+    }
+}
+
+/* Styling untuk Box Harga */
+.price-box {
+    margin-top: 15px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.price-box strong {
+    font-weight: bold;
+}
